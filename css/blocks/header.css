@@ -1,0 +1,14 @@
+.header {
+background-color: rgb(223, 202, 113);
+opacity: 0.9;
+border:none;
+display: flex;
+align-items: center;
+justify-content: space-between;
+top:0;   
+height: 100px;
+margin-top:0px;
+box-shadow: inset 0px 0px 3px 0px rgb(99, 65, 1);
+padding: 10px;
+  }
+  

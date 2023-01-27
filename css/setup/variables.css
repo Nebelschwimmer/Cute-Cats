@@ -1,0 +1,16 @@
+:root {
+    --bg-main-color: #f7edb8;
+    --bg-main-color-dark: #2b2304;
+    --bg-secondary-color: #6e4708;
+    --bg-overlay-color: rgba(25, 20, 20, 0.8);
+    --text-main-color: #191414;
+    --text-light-color: #f8f7f7;
+    --text-secondary-color: #7b8e98;
+    --outline-color: #cf660f;
+    --form-color: #ffe8bd;
+    --accent-color: #e72e00;
+    --primary-color: #ffcc00;
+    --secondary-color: #1db954;
+    --tertiary-color: #ce2724;
+  }
+  
