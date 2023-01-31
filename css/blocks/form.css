@@ -5,6 +5,17 @@
     font-family: 'Titillium Web', sans-serif;
 
   }
+
+  @media only screen and (max-width: 500px) {
+    .form {
+    height:800px;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+    } 
+  
+  
   
   .form__image {
     grid-row: span 3;
@@ -13,8 +24,9 @@
     background-repeat: no-repeat;
     
     width: 100%;
-
   }
+
+ 
   
   .form__textarea {
     grid-row: span 2;

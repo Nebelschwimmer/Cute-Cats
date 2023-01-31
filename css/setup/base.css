@@ -18,3 +18,21 @@ html {
 
      
 }
+
+@media (max-width: 500px) {
+  .container {
+    padding: 80px;
+  }
+  .btn {
+    width:10px;
+  }
+
+  header {
+  height: 10px;  
+  }
+
+
+
+
+}
+

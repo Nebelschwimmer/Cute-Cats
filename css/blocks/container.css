@@ -6,8 +6,3 @@
   margin-right: auto;
 }
 
-@media (max-width: 500px) {
-  .container {
-    padding: 0 16px;
-  }
-}

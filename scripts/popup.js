@@ -5,7 +5,6 @@ class Popup {
     this._handleEscUp = this._handleEscUp.bind(this);
   }
 
-
   _handleEscUp(evt) {
     if (evt.key === 'Escape') {
       this.close();
@@ -18,14 +17,31 @@ class Popup {
     document.addEventListener('keyup', this._handleEscUp);
   }
 
- 
+  
   close() {
     this.popup.classList.remove('popup_active');
     document.removeEventListener('keyup', this._handleEscUp);
   }
+  setContent(content, id) {
+   
+    const cardImage = content.querySelector('.card__image').src;
+    const cardLink = content.querySelector('.card__link').textContent;
+    const elements = [...document.querySelector('#popup-form-edit').elements];
+   
+    
+    elements.forEach((input) => {
+      
+      if (input.type === 'submit') return;
 
-  
- 
+      if (input.name === 'id') {
+        input.value = id;
+        return (input.disabled = true);
+      }
+      if (input.type !== 'checkbox') input.value = '';
+      if (input.type === 'checkbox') input.checked = true;
+    });
+  }
+
   setEventListener() {
     this.popup.addEventListener('click', (evt) => {
       if (

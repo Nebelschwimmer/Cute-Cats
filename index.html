@@ -25,12 +25,12 @@
   <body class="page">
     <!-- Header -->
     <header class="header">
-      <i class="fa-solid fa-cat fa-4x"></i>
+      <i class="fa-solid fa-cat fa-4x logo"></i>
       <div class="logo_title">
-      <h1> Милые котики </h1>
+        <h1> Милые котики </h1>
   <p class="motto"> Смотрите, создавайте и обменивайтесь коллекцией фото ваших любимых питомцев! </p>
   </div>
-  <div class="header_controls">
+  <div class="header_button">
       <button type="button" class="btn_header" id="add"><i class="fa-solid fa-plus"></i>Добавить <br> питомца</button>
   </div>
   </header>
@@ -44,30 +44,7 @@
     
    
 
-    
-     <!-- Popup_Info -->
-    
-    <!-- <div class="popup_info">
-      
-      <div class="popup_info_container" >
-        <h3 class="about_cat">Информация о котике</h3>
-        <div class="popup_info_container_grid" >
-        <button class="popup_info_close_btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
-        
-        <div class="info_text">
-        <h4>Имя:</h4> <span id="info_name">Thomas</span>
-        <h4>Id:</h4> <span id="info_name">234</span>
-        <h4>Возраст:</h4> <span id="info_age">2</span>
-        <h4>Рейтинг:</h4> <span id="info_rate">1</span>
-        <h4>Любимчик:</h4> <span id="info_favorite">Да</span>
-        <h4>Описание:</h4> <span id="info_description">Очень умный и ласковый</span>
-        
-      </div>
-        <div class="popup_info_image"></div>
-      </div>
-      </div>
-    </div> -->
-    
+  
     
     
     
@@ -95,6 +72,29 @@
           </form>
       </div>
   </div>
+
+<!-- Popup_edit_info -->
+  <div class="popup popup-edit-cats">
+    <div class="popup__container" >
+        <button class="popup__close btn" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Изменить данные питомца</h2>
+        <form class="form" id="popup-form-edit">
+            <div class="form__image"></div>
+            <input type="number" class="form__input" name="id" min="1" required placeholder="id">
+            <input type="number" class="form__input" name="age" placeholder="Возраст">
+            <input type="text" class="form__input" name="name" required placeholder="Имя">
+            <input type="number" class="form__input" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
+            <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
+            <label class="form__checkbox-wrap">
+                <input type="checkbox" name="favorite" class="form__checkbox " placeholder="">
+                <span class="form__label">Любимчик</span>  
+                <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
+            </label>
+            <input type="url" class="form__input form__input_image" name="image" placeholder="Ссылка на фото">
+            <button type="submit" class="form__btn btn">Отправить</button>
+        </form>
+    </div>
+</div>
  
  
   <!-- Footer -->
@@ -124,16 +124,38 @@
     <div class="card">
       <div class="buttons"> 
         <button class="card__like" aria-label="Мне нравится" title="Мне нравится"><i class="fa-solid fa-heart fa"></i> </button> 
+        <button class="card__edit" aria-label="Редактировать" title="Редактировать"><i class="fa-regular fa-pen-to-square"></i> </button>
         <button class="card__delete" id="card-delete" aria-label="Удалить" title="Удалить"><i class="fa-solid fa-trash"></i> </button>
-         <button class="card__edit" aria-label="Редактировать" title="Редактировать"><i class="fa-regular fa-pen-to-square"></i> </button> 
+         
       </div>
       <div class="link_buttons">
         <a href="#" class="card__link" aria-label="Подробнее" title="Открыть информацию о котике"><h3 class="card__name">Tom</h3> </a>   
      
         </div>
-         <img src="./assets/images/cat.jpg" alt="Image" class="card__image" aria-label="Подробнее" title="Открыть информацию о котике" />
+         <img src="./assets/images/cat.jpg" alt="Image" class="card__image" aria-label="Подробнее" title="Редактировать котика" />
     </div>
   </template>
+<!-- Cats edit template-->
+  <template id="cats-info-template">
+    <div class="cat-info">
+        <button class="cat-info__edited"><i class="fa-regular fa-pen-to-square"></i>Редактировать</button>
+        <button class="cat-info__saved cat-info__saved_hidden"><i class="fa-regular fa-pen-to-square"></i>Сохранить</button>
+        <button class="cat-info__deleted"><i class="fa-solid fa-trash"></i>Удалить</button>
+
+        <img src="#" class="cat-info__image" loading="lazy">
+        <span class="cat-info__id"></span>
+        <div class="cat-info__title">
+            <h2 class="cat-info__name"></h2>
+            <button class="cat-info__favourite"><i class="fa-solid fa-heart fa-2x"></i></button>
+        </div>
+        <span class="cat-info__rate"></span>
+        <div class="cat-info__age">
+            <span class="cat-info__age-val"></span>
+            <span class="cat-info__age-text"></span>
+        </div>
+        <p class="cat-info__desc"></p>
+    </div>
+</template>
 
 <script src="./scripts/api.js"></script>
 <script src="./scripts/cats.js"></script>
@@ -141,4 +163,6 @@
 <script src="./scripts/card.js"></script>
 <script src="./scripts/popup.js"></script>
 <script src="./scripts/index.js"></script>
+<script src="./scripts/index.js"></script>
+<script src="./scripts/cats-edit.js"></script>
 </html>

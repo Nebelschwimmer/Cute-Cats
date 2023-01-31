@@ -92,9 +92,7 @@ border-top-left-radius:10px;
   .card__delete:hover {
   color: rgba(255, 0, 0, 0.7);
   } 
-  .card__like:hover {
-  color: rgba(255, 0, 0, 0.7);  
-  }
+
 
   .card__edit {
     border: none;
@@ -119,3 +117,11 @@ border-top-left-radius:10px;
   display: flex;
   justify-content: space-between; 
 }
+
+@media only screen and (max-width: 500px) {
+  
+  .card {
+  width: 320px;
+
+}
+}   

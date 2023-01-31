@@ -3,3 +3,14 @@ height: 100vh;
 padding:10px;
 margin: 10px;
 }
+
+@media (max-width: 500px) {
+}
+.card-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+  
+
+}
